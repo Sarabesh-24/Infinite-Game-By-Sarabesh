@@ -33,7 +33,6 @@ createCanvas(600,600);
   left.scale = 0.1
   Tower.velocityY = 3;
   DoorGroup = new Group();
-  
 }
 
 function draw(){
@@ -61,6 +60,7 @@ background("black");
   if(DoorGroup.isTouching(Ghost)||Ghost.y>600){
     gameState = END;
   }
+ 
   drawSprites();
 }
    if(gameState==END){
@@ -83,6 +83,5 @@ function doors(){
     Door.depth = Ghost.depth
     Ghost.depth +=1 ;
     DoorGroup.add(Door);
-    Ghost.collider.radius=0.5
   }
 }
